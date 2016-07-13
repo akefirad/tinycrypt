@@ -21,9 +21,15 @@
     <ClInclude Include="include\tinycrypt\utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\tinycrypt\sha256.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sha256.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
