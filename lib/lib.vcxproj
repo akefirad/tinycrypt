@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\tinycrypt\constants.h" />
+    <ClInclude Include="include\tinycrypt\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\utils.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4B450FE1-06E5-4F75-AE72-DDAE6C0E0B00}</ProjectGuid>

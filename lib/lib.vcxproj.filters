@@ -18,5 +18,13 @@
     <ClInclude Include="include\tinycrypt\constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\tinycrypt\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
