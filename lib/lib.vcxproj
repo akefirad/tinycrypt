@@ -10,6 +10,9 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\tinycrypt\constants.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4B450FE1-06E5-4F75-AE72-DDAE6C0E0B00}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

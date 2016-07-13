@@ -39,6 +39,18 @@
 #ifndef __TC_CONSTANTS_H__
 #define __TC_CONSTANTS_H__
 
+#pragma region MISSING_C99_FEATURES
+#if __STDC_VERSION__ >= 199901L
+/* "inline" is a keyword */
+/* "__func__" is defined */
+#elif _MSC_VER <= 1800
+#  define inline __inline
+#  ifndef __func__
+#    define __func__ __FUNCTION__
+#  endif
+#endif
+#pragma endregion
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -47,9 +59,9 @@ extern "C" {
 #define NULL ((void *)0)
 #endif
 
-#ifndef bool
-enum {false, true} bool;
-#endif
+//#ifndef bool
+//enum {false, true} bool;
+//#endif
 
 #define TC_CRYPTO_SUCCESS 1
 #define TC_CRYPTO_FAIL 0
