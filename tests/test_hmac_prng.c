@@ -48,6 +48,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define size (1 << 15)
+
 /*
  * Main task to test AES
  */
@@ -56,7 +58,8 @@ int main(void)
 {
         uint8_t seed[128];
         struct tc_hmac_prng_struct h;
-        uint32_t size = (1 << 15);
+		/* VLA is not supported by MSVC. Workaround: define "size" as macro. */
+        //uint32_t size = (1 << 15);
         uint8_t random[size];
         uint32_t i;
         uint32_t result = TC_PASS;

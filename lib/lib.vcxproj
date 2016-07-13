@@ -14,6 +14,7 @@
     <ClInclude Include="include\tinycrypt\aes.h" />
     <ClInclude Include="include\tinycrypt\constants.h" />
     <ClInclude Include="include\tinycrypt\hmac.h" />
+    <ClInclude Include="include\tinycrypt\hmac_prng.h" />
     <ClInclude Include="include\tinycrypt\sha256.h" />
     <ClInclude Include="include\tinycrypt\utils.h" />
   </ItemGroup>
@@ -21,6 +22,7 @@
     <ClCompile Include="source\aes_decrypt.c" />
     <ClCompile Include="source\aes_encrypt.c" />
     <ClCompile Include="source\hmac.c" />
+    <ClCompile Include="source\hmac_prng.c" />
     <ClCompile Include="source\sha256.c" />
     <ClCompile Include="source\utils.c" />
   </ItemGroup>

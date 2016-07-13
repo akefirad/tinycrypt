@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_aes", "tests\test_aes.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_hmac", "tests\test_hmac.vcxproj", "{3378118D-8575-4B6D-8CD9-F806ADDF4177}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_hmac_prng", "tests\test_hmac_prng.vcxproj", "{A8192332-67C9-46CA-8045-E5FB237224C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -35,6 +37,10 @@ Global
 		{3378118D-8575-4B6D-8CD9-F806ADDF4177}.Debug|Win32.Build.0 = Debug|Win32
 		{3378118D-8575-4B6D-8CD9-F806ADDF4177}.Release|Win32.ActiveCfg = Release|Win32
 		{3378118D-8575-4B6D-8CD9-F806ADDF4177}.Release|Win32.Build.0 = Release|Win32
+		{A8192332-67C9-46CA-8045-E5FB237224C2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A8192332-67C9-46CA-8045-E5FB237224C2}.Debug|Win32.Build.0 = Debug|Win32
+		{A8192332-67C9-46CA-8045-E5FB237224C2}.Release|Win32.ActiveCfg = Release|Win32
+		{A8192332-67C9-46CA-8045-E5FB237224C2}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,5 +49,6 @@ Global
 		{868BC6C3-5B7D-49CA-8811-3A944FCE6817} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
 		{9391028E-93B4-4900-8078-92D69C6ADD11} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
 		{3378118D-8575-4B6D-8CD9-F806ADDF4177} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
+		{A8192332-67C9-46CA-8045-E5FB237224C2} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
 	EndGlobalSection
 EndGlobal
