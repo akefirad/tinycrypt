@@ -18,6 +18,9 @@
     <ClInclude Include="include\tinycrypt\constants.h" />
     <ClInclude Include="include\tinycrypt\ctr_mode.h" />
     <ClInclude Include="include\tinycrypt\ctr_prng.h" />
+    <ClInclude Include="include\tinycrypt\ecc.h" />
+    <ClInclude Include="include\tinycrypt\ecc_dh.h" />
+    <ClInclude Include="include\tinycrypt\ecc_dsa.h" />
     <ClInclude Include="include\tinycrypt\hmac.h" />
     <ClInclude Include="include\tinycrypt\hmac_prng.h" />
     <ClInclude Include="include\tinycrypt\sha256.h" />
@@ -31,6 +34,9 @@
     <ClCompile Include="source\cmac_mode.c" />
     <ClCompile Include="source\ctr_mode.c" />
     <ClCompile Include="source\ctr_prng.c" />
+    <ClCompile Include="source\ecc.c" />
+    <ClCompile Include="source\ecc_dh.c" />
+    <ClCompile Include="source\ecc_dsa.c" />
     <ClCompile Include="source\hmac.c" />
     <ClCompile Include="source\hmac_prng.c" />
     <ClCompile Include="source\sha256.c" />
