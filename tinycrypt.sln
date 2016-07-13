@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_cbc_mode", "tests\test
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_ccm_mode", "tests\test_ccm_mode.vcxproj", "{D5875B56-B77E-4F30-8CA1-4CD208804480}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_cmac_mode", "tests\test_cmac_mode.vcxproj", "{0D35CC7F-D24C-4D7D-B918-B2DBD8691EDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -53,6 +55,10 @@ Global
 		{D5875B56-B77E-4F30-8CA1-4CD208804480}.Debug|Win32.Build.0 = Debug|Win32
 		{D5875B56-B77E-4F30-8CA1-4CD208804480}.Release|Win32.ActiveCfg = Release|Win32
 		{D5875B56-B77E-4F30-8CA1-4CD208804480}.Release|Win32.Build.0 = Release|Win32
+		{0D35CC7F-D24C-4D7D-B918-B2DBD8691EDE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0D35CC7F-D24C-4D7D-B918-B2DBD8691EDE}.Debug|Win32.Build.0 = Debug|Win32
+		{0D35CC7F-D24C-4D7D-B918-B2DBD8691EDE}.Release|Win32.ActiveCfg = Release|Win32
+		{0D35CC7F-D24C-4D7D-B918-B2DBD8691EDE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{A8192332-67C9-46CA-8045-E5FB237224C2} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
 		{F77BE583-EEE0-4FD6-8B83-C52F97ABCEA7} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
 		{D5875B56-B77E-4F30-8CA1-4CD208804480} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
+		{0D35CC7F-D24C-4D7D-B918-B2DBD8691EDE} = {8200C2E5-2D01-4662-A9CB-954C3712FBD0}
 	EndGlobalSection
 EndGlobal
