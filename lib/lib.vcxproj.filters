@@ -29,6 +29,9 @@
     <ClInclude Include="include\tinycrypt\hmac_prng.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\tinycrypt\cbc_mode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\utils.c">
@@ -47,6 +50,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\hmac_prng.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\cbc_mode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
