@@ -23,6 +23,9 @@
     <ClInclude Include="include\tinycrypt\aes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\tinycrypt\hmac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\utils.c">
@@ -35,6 +38,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\aes_encrypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hmac.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

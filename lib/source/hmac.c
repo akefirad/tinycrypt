@@ -34,6 +34,8 @@
 #include <tinycrypt/constants.h>
 #include <tinycrypt/utils.h>
 
+#include <malloc.h>
+
 static void rekey(uint8_t *key, const uint8_t *new_key, uint32_t key_size)
 {
 	const uint8_t inner_pad = (uint8_t) 0x36;
@@ -60,7 +62,13 @@ int32_t tc_hmac_set_key(TCHmacState_t ctx,
 		return TC_CRYPTO_FAIL;
 	}
 
-	const uint8_t dummy_key[key_size];
+	/* VLA is not supported by MSVC. Workaround: use either
+	 * malloc or alloc. Using malloc needs to free the space.
+	 * Using alloc might cause stack-overflow or unexpected
+	 * behavior, but since the key_size is small, it's safe.
+	 */
+	//const uint8_t dummy_key[key_size];
+	uint8_t * const dummy_key = alloca(key_size);
 	struct tc_hmac_state_struct dummy_state;
 
 	if (key_size <= TC_SHA256_BLOCK_SIZE) {
