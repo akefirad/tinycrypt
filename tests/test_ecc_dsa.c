@@ -551,50 +551,52 @@ void montecarlo_signverify(uint32_t num, bool verbose) {
   printf("Test #3: Monte Carlo (Randomized EC-DSA signatures) ");
   printf("NIST-p256, SHA2-256\n");
 
-  EccPoint l_public;
-  uint32_t l_private[NUM_ECC_DIGITS];
+  printf("WARINING: test is not implemented yet!\n");
 
-  uint32_t l_hash[NUM_ECC_DIGITS];
-  uint32_t l_random[NUM_ECC_DIGITS];
+  //EccPoint l_public;
+  //uint32_t l_private[NUM_ECC_DIGITS];
 
-  uint32_t r[NUM_ECC_DIGITS];
-  uint32_t s[NUM_ECC_DIGITS];
+  //uint32_t l_hash[NUM_ECC_DIGITS];
+  //uint32_t l_random[NUM_ECC_DIGITS];
 
-  randfd = open("/dev/urandom", O_RDONLY);
-  if(randfd == -1) {
-    printf("No access to urandom\n");
-    exit(-1);
-  }
+  //uint32_t r[NUM_ECC_DIGITS];
+  //uint32_t s[NUM_ECC_DIGITS];
 
-  for(uint32_t i=0; i<num; ++i) {
+  //randfd = open("/dev/urandom", O_RDONLY);
+  //if(randfd == -1) {
+  //  printf("No access to urandom\n");
+  //  exit(-1);
+  //}
 
-    getRandomBytes((char *)l_random, sizeof(l_random));
-    ecc_make_key(&l_public, l_private, l_random);
+  //for(uint32_t i=0; i<num; ++i) {
 
-    getRandomBytes((char *)l_hash, sizeof(l_hash));
-    getRandomBytes((char *)l_random, sizeof(l_random));
+  //  getRandomBytes((char *)l_random, sizeof(l_random));
+  //  ecc_make_key(&l_public, l_private, l_random);
 
-    if(!ecdsa_sign(r, s, l_private, l_random, l_hash)) {
-      printf("ecdsa_sign() failed\n");
-      exit(-1);
-    }
+  //  getRandomBytes((char *)l_hash, sizeof(l_hash));
+  //  getRandomBytes((char *)l_random, sizeof(l_random));
 
-    if(ecc_valid_public_key(&l_public) != 0) {
-      printf("Not a valid public key!\n");
-      exit(-1);
-    }
+  //  if(!ecdsa_sign(r, s, l_private, l_random, l_hash)) {
+  //    printf("ecdsa_sign() failed\n");
+  //    exit(-1);
+  //  }
 
-    if(!ecdsa_verify(&l_public, l_hash, r, s)) {
-      printf("ecdsa_verify() failed\n");
-      exit(-1);
-    }
+  //  if(ecc_valid_public_key(&l_public) != 0) {
+  //    printf("Not a valid public key!\n");
+  //    exit(-1);
+  //  }
 
-    if (verbose) {
-      fflush(stdout);
-      printf(".");
-    }
-  }
-  printf("\n");
+  //  if(!ecdsa_verify(&l_public, l_hash, r, s)) {
+  //    printf("ecdsa_verify() failed\n");
+  //    exit(-1);
+  //  }
+
+  //  if (verbose) {
+  //    fflush(stdout);
+  //    printf(".");
+  //  }
+  //}
+  //printf("\n");
 }
 
 int main() {
