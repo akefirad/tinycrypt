@@ -40,7 +40,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
+//#include <unistd.h>
+#include <malloc.h>
 
 extern int randfd;
 
@@ -107,7 +108,15 @@ int hex2bin(
 void string2scalar(uint32_t * scalar, uint32_t num_word32, char *str) {
 
   uint32_t num_bytes = 4*num_word32;
-  uint8_t tmp[num_bytes];
+
+  /* VLA is not supported by MSVC. Workaround: use either
+  * malloc or alloc. Using malloc needs to free the space.
+  * Using alloc might cause stack-overflow or unexpected
+  * behavior, but since the num_bytes is small (8), it's safe.
+  */
+  //uint8_t tmp[num_bytes];
+  uint8_t * const tmp = alloca(num_bytes);
+
   size_t hexlen = strlen(str);
 
   int padding;
