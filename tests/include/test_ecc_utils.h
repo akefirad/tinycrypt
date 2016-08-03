@@ -45,7 +45,7 @@ EccPoint keygen_vectors(char **d_vec,
     int tests,
     bool verbose);
 
-void getRandomBytes(void *p_dest, unsigned p_size);
+//void getRandomBytes(void *p_dest, unsigned p_size);
 
 void string2host(uint32_t *native, const uint8_t *bytes, size_t len);
 
