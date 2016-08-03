@@ -46,6 +46,7 @@
     <ProjectGuid>{4B450FE1-06E5-4F75-AE72-DDAE6C0E0B00}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>lib</RootNamespace>
+    <ProjectName>tinycryptlib</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

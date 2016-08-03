@@ -34,7 +34,7 @@
 #include <tinycrypt/constants.h>
 #include <tinycrypt/utils.h>
 
-#include <malloc.h>
+#include <stdlib.h>
 
 static void rekey(uint8_t *key, const uint8_t *new_key, uint32_t key_size)
 {
@@ -63,12 +63,13 @@ int32_t tc_hmac_set_key(TCHmacState_t ctx,
 	}
 
 	/* VLA is not supported by MSVC. Workaround: use either
-	 * malloc or alloc. Using malloc needs to free the space.
-	 * Using alloc might cause stack-overflow or unexpected
+	 * malloc or alloca. Using malloc needs to free the space.
+	 * Using alloca might cause stack-overflow or unexpected
 	 * behavior, but since the key_size is small, it's safe.
+	 * However, alloca is not supported in SGX SDK.
 	 */
 	//const uint8_t dummy_key[key_size];
-	uint8_t * const dummy_key = alloca(key_size);
+	uint8_t * const dummy_key = malloc(key_size);
 	struct tc_hmac_state_struct dummy_state;
 
 	if (key_size <= TC_SHA256_BLOCK_SIZE) {
@@ -98,6 +99,8 @@ int32_t tc_hmac_set_key(TCHmacState_t ctx,
 		      TC_SHA256_DIGEST_SIZE);
 	}
 
+	// Don't forget to free dummy_key;
+	free(dummy_key);
 	return TC_CRYPTO_SUCCESS;
 }
 
