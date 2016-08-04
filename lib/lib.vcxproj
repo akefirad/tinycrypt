@@ -46,7 +46,7 @@
     <ProjectGuid>{4B450FE1-06E5-4F75-AE72-DDAE6C0E0B00}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>lib</RootNamespace>
-    <ProjectName>tinycryptlib</ProjectName>
+    <ProjectName>tinycrypt</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,11 +73,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>tinycrypt</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
     <IntDir>$(Configuration)\tinycrypt\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>tinycrypt</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
     <IntDir>$(Configuration)\tinycrypt\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -94,10 +94,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY /Y /I /S $(ProjectDir)include $(OutDir)include</Command>
+      <Command>XCOPY /Y /I /S $(ProjectDir)include $(LIBRARIES)\tinycrypt\include &amp; XCOPY /Y /I /S $(TargetPath) $(LIBRARIES)\tinycrypt\$(Configuration)\</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>Copying header files...</Message>
+      <Message>Copying library and header files...</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,10 +118,10 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY /Y /I /S $(ProjectDir)include $(OutDir)include</Command>
+      <Command>XCOPY /Y /I /S $(ProjectDir)include $(LIBRARIES)\tinycrypt\include &amp; XCOPY /Y /I /S $(TargetPath) $(LIBRARIES)\tinycrypt\$(Configuration)\</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>Copying header files...</Message>
+      <Message>Copying library and header files...</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

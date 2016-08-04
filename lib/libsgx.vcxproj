@@ -53,7 +53,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9342A703-D43B-4964-8FF2-F5CF5A9A1E20}</ProjectGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProjectName>tinycryptlibsgx</ProjectName>
+    <ProjectName>tinycrypt.sgx</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -129,6 +129,12 @@
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
     </Lib>
+    <PostBuildEvent>
+      <Command>XCOPY /Y /I /S $(ProjectDir)include $(LIBRARIES)\tinycrypt\include &amp; XCOPY /Y /I /S $(TargetPath) $(LIBRARIES)\tinycrypt\$(Configuration)\</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying library and header files...</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Simulation|Win32'">
     <ClCompile>
@@ -141,6 +147,12 @@
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
     </Lib>
+    <PostBuildEvent>
+      <Command>XCOPY /Y /I /S $(ProjectDir)include $(LIBRARIES)\tinycrypt\include &amp; XCOPY /Y /I /S $(TargetPath) $(LIBRARIES)\tinycrypt\$(Configuration)\</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying library and header files...</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -154,6 +166,12 @@
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
     </Lib>
+    <PostBuildEvent>
+      <Command>XCOPY /Y /I /S $(ProjectDir)include $(LIBRARIES)\tinycrypt\include &amp; XCOPY /Y /I /S $(TargetPath) $(LIBRARIES)\tinycrypt\$(Configuration)\</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying library and header files...</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|Win32'">
     <ClCompile>
@@ -167,6 +185,12 @@
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
     </Lib>
+    <PostBuildEvent>
+      <Command>XCOPY /Y /I /S $(ProjectDir)include $(LIBRARIES)\tinycrypt\include &amp; XCOPY /Y /I /S $(TargetPath) $(LIBRARIES)\tinycrypt\$(Configuration)\</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying library and header files...</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
